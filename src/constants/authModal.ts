@@ -1,0 +1,5 @@
+export const AUTH_STEP = {
+  REGISTER: 'REGISTER',
+  LOGIN: 'LOGIN',
+  VERIFY: 'VERIFY'
+}

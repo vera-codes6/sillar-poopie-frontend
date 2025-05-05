@@ -1,0 +1,167 @@
+{
+  "appname": "Poopie Coin",
+  "navigation": {
+    "About": "关于",
+    "Tokenomics": "代币经济学",
+    "Roadmap": "路线图",
+    "Community": "社区",
+    "FAQ": "FAQ",
+    "Connect": "连接"
+  },
+  "section1": {
+    "description": "每次上厕所都会成为您内心射手的靶心时刻。完成紧迫的期限，冲破加密货币世界。"
+  },
+  "section2": {
+    "about": "关于",
+    "poopecoin": "便便币",
+    "description": "$POOPE 不仅仅是便便。一种开源的点对点数字货币，受到全球 Solana Network 的青睐。\n\n从本质上讲，POOPECOIN 是一种偶然的加密运动，它让人们微笑，它令人惊叹、充满活力的社区由像您一样友好的人组成！我们将共同冲到 10 亿美元的市值。冲下去，冲上去！",
+    "buy_poope": "购买 POOPE",
+    "read_more": "阅读更多"
+  },
+  "section3": {
+    "token": "代币",
+    "omic": "经济学",
+    "poopie": "POOPIE 是",
+    "li1": "100% 社区所有。无开发者持股。",
+    "li2": "LP 已烧毁 100%。",
+    "li3": "9.89 亿美元供应量",
+    "li4": "100%流通发行。",
+    "buy": "购买 POOPIE",
+    "from": "来自社区"
+  },
+  "section4": {
+    "our": "我们的",
+    "roadmap": "路线图",
+    "description": "此路线图概述了我们实现激动人心的里程碑的历程，包括在主要交易所上市。让我们为创新发展铺平道路。",
+    "phase": "阶段",
+    "phase1": {
+      "li1": "在 Solana 上启动",
+      "li2": "网站登陆页面",
+      "li3": "营销"
+    },
+    "phase2": {
+      "li1": "Twitter/X 营销",
+      "li2": "Dexscreener 和 Birdeye 更新",
+      "li3": "建立我们的社区"
+    },
+    "phase3": {
+      "li1": "X 上的热门内容",
+      "li2": "CG CMC 上市"
+    },
+    "phase4": {
+      "li1": "建立便便的存在",
+      "li2": "传播迷因",
+      "li3": "确保长期可持续性"
+    }
+  },
+  "section5": {
+    "findout": "查出",
+    "more": "更多的",
+    "lookingfor": "没有找到您要找的内容？",
+    "viewmore": "查看更多",
+    "questions": "常见问题",
+    "resources": "资源",
+    "how": "如何",
+    "documentation": "文档",
+    "acc1": {
+      "item1": {
+        "title": "一只狗拥有近 30% 的 Poope Coin 供应量！这是真的吗？“",
+        "context": "哦，是的，它确实如此，而且一直如此！简单的事实是，钱有用处 - 而狗狗币就是钱！事实上，Poopiecoin 是从第一天起就用于这一主要目的的少数加密货币之一。Poopie 最初是一个笑话......"
+      },
+      "item2": {
+        "title": "Poope Coin 没有任何实用性！",
+        "context": "哦，是的，它确实有用，而且一直如此！简单的事实是，钱有用——而狗狗币就是钱！事实上，Poopiecoin 是少数从第一天起就用于这一主要目的的加密货币之一。Poopie 最初是一个笑话……"
+      },
+      "item3": {
+        "title": "你能给 Poope Coin 设定一个上限吗？",
+        "context": "哦，是的，它确实有用，而且一直如此！简单的事实是，钱有用——而狗狗币就是钱！事实上，Poopiecoin 是少数从第一天起就用于这一主要目的的加密货币之一。Poopie 最初是一个笑话……"
+      },
+      "item4": {
+        "title": "Poope Coin 没有开发者！",
+        "context": "哦，是的，它确实有用，而且一直如此！简单的事实是，钱有用——而狗狗币就是钱！事实上，Poopiecoin 是少数从第一天起就用于这一主要目的的加密货币之一。Poopie 最初是一个笑话……"
+      }
+    }
+  },
+  "section6": {
+    "stay": "保持",
+    "updated": "更新",
+    "readmore": "Read more",
+    "blog1": {
+      "title": "Poope Coin 没有任何实用性！",
+      "content": "哦，是的，它确实如此，而且一直如此！简单的事实是，钱有实用性——而 Poo 就是钱！事实上，Poopecoin 是少数"
+    },
+    "blog2": {
+      "title": "如何用便便取胜",
+      "content": "从第一天起，加密货币就被用于这个主要目的。Poopie 最初是用来……"
+    },
+    "blog3": {
+      "title": "从未如此轻松收集",
+      "content": "确实，Poopecoin 是少数从第一天起就用于此主要目的的加密货币之一。Poopie 是第一个......"
+    }
+  },
+  "section7": {
+    "description": "当 Meme token 能把人们聚集在一起时，这是一件很美好的事情",
+    "join": "立即加入我们的 POOPE 社区。它是 Solana 上发展最快的社区之一！不要错过 POOPE、$POO。"
+  },
+  "footer": {
+    "col1": "每次上厕所都会成为您内心射手的靶心时刻。完成紧迫的期限，冲破加密货币世界。",
+    "col2": {
+      "ul": "网站地图",
+      "li1": "什么是Poopie",
+      "li2": "购买 Poopie",
+      "li3": "FAQ"
+    },
+    "col3": {
+      "ul": "基础",
+      "blog": "博客"
+    },
+    "privacy": "隐私政策",
+    "terms": "条款 & 条件"
+  },
+  "connect_modal": {
+    "title": "连接到你的 Solana 钱包"
+  },
+  "dashboard": "仪表板",
+  "transactions": "交易",
+  "market": "市场",
+  "notification": "通知",
+  "settings": "设置",
+  "support": "支持",
+  "logout": "注销",
+  "manage": "管理",
+  "home": {
+    "total": "总便便余额",
+    "price": "价格",
+    "chart": "图表",
+    "lowerprice": "较低的价格",
+    "higherprice": "价格更高",
+    "buypoopie": "购买 Poopie",
+    "recenttrans": "最近交易",
+    "max": "最大",
+    "fee": "交易费: ",
+    "viewhistory": "查看历史记录"
+  },
+  "chart": {
+    "price": "价格",
+    "chart": "图表"
+  },
+  "swap": "交换",
+  "featuretitle": "新功能将使您的加密生活更加轻松",
+  "featurecontent": "我们终于准备好向你介绍这个新版本的一切了",
+  "letsee": "让我们来看看",
+  "buylabel": "买",
+  "token_modal": {
+    "title": "选择一个代币",
+    "recent": "最近的",
+    "alltokens": "所有代币",
+    "balance": "余额/地址"
+  },
+  "loading": "加载中",
+  "notfound": "完成你的任务",
+  "notfound-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra integer vel quam amet eget. Massa nec nam molestie urna, iaculis sed.",
+  "today": "今天",
+  "days7": "7 天",
+  "days30": "30 天",
+  "withdraw": "提取",
+  "convert": "转变"
+}

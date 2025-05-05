@@ -1,0 +1,6 @@
+export const DASHBOARD: string = 'dashboard'
+export const TRANSACTIONS: string = 'transactions'
+export const MARKET: string = 'market'
+export const NOTIFICATION: string = 'notification'
+export const SETTINGS: string = 'settings'
+export const SUPPORT: string = 'support'

@@ -1,0 +1,178 @@
+{
+  "appname": "Poopie Coin",
+  "navigation": {
+    "About": "About",
+    "Tokenomics": "Tokenomics",
+    "Roadmap": "Roadmap",
+    "Community": "Community",
+    "FAQ": "FAQ",
+    "Connect": "CONNECT",
+    "Logout": "Logout"
+  },
+  "section1": {
+    "description": "Every bathroom break becomes a bullseye moment to embrace your inner marksman. Nail that tight deadline, blast through the crypto world."
+  },
+  "section2": {
+    "about": "About",
+    "poopecoin": "POOPECOIN",
+    "description": "$POOPE isn't just a Poop. An open-source peer-to-peer digital currency, favoured on Solana Network worldwide.\n\nAt its heart, POOPECOIN is the accidental crypto movement that makes people smile and its amazing, vibrant community made up of friendly folks just like you! Together, we will flush to a 1 billion market cap. Plup down, flush up!",
+    "buy_poope": "BUY POOPE",
+    "read_more": "READ MORE"
+  },
+  "section3": {
+    "token": "TOKEN",
+    "omic": "OMIC",
+    "poopie": "POOPIE is",
+    "li1": "100% community owned. No dev holding supply.",
+    "li2": "LP 100% burnt.",
+    "li3": "989 million $sc supply",
+    "li4": "100% released in circulation.",
+    "buy": "BUY POOPIE",
+    "from": "From the community"
+  },
+  "section4": {
+    "our": "OUR",
+    "roadmap": "ROADMAP",
+    "description": "This roadmap outlines our journey to exciting milestones, including listings on major exchanges. Let's pave the way for innovative developments.",
+    "phase": "PHASE",
+    "phase1": {
+      "li1": "Launch on Solana",
+      "li2": "Website Landing Page",
+      "li3": "Marketing"
+    },
+    "phase2": {
+      "li1": "Twitter/X Marketing",
+      "li2": "Dexscreener and Birdeye Update",
+      "li3": "Build our Community"
+    },
+    "phase3": {
+      "li1": "Trending on X",
+      "li2": "CG CMC Listing"
+    },
+    "phase4": {
+      "li1": "Establish Poopie presence",
+      "li2": "Spreading memes",
+      "li3": "Ensure long-term sustainability"
+    }
+  },
+  "section5": {
+    "findout": "FIND OUT",
+    "more": "MORE",
+    "lookingfor": "Didn't find what you looking for?",
+    "viewmore": "View More",
+    "questions": "Frequently Asked Questions",
+    "resources": "Resources",
+    "how": "How to's",
+    "documentation": "Documentation",
+    "acc1": {
+      "item1": {
+        "title": "A hale holds nearly 30% of Poope Coin supply! Is this true?",
+        "context": "Oh yes it does, and it always has! The simple fact is that money has utility - and Dogecoin is money! Indeed, Poopiecoin is one of the few cryptocurrencies that has been used for this main purpose from day one. Poopie was first meant to be a joke..."
+      },
+      "item2": {
+        "title": "Poope Coin has no utility!",
+        "context": "Oh yes it does, and it always has! The simple fact is that money has utility - and Dogecoin is money! Indeed, Poopiecoin is one of the few cryptocurrencies that has been used for this main purpose from day one. Poopie was first meant to be a joke..."
+      },
+      "item3": {
+        "title": "Can you put a cap on Poope Coin?",
+        "context": "Oh yes it does, and it always has! The simple fact is that money has utility - and Dogecoin is money! Indeed, Poopiecoin is one of the few cryptocurrencies that has been used for this main purpose from day one. Poopie was first meant to be a joke..."
+      },
+      "item4": {
+        "title": "Poope Coin has no developers!",
+        "context": "Oh yes it does, and it always has! The simple fact is that money has utility - and Dogecoin is money! Indeed, Poopiecoin is one of the few cryptocurrencies that has been used for this main purpose from day one. Poopie was first meant to be a joke..."
+      }
+    }
+  },
+  "section6": {
+    "stay": "STAY",
+    "updated": "UPDATED",
+    "readmore": "Read more",
+    "blog1": {
+      "title": "Poope Coin has no utility!",
+      "content": "Oh yes it does, and it always has! The simple fact is that money has utility - and Poo is money! Indeed, Poopecoin is one of the few asdgasasdfasdfdf"
+    },
+    "blog2": {
+      "title": "How to win with Poope",
+      "content": "Cryptocurrencies that has been used for this main purpose from day one. Poopie was first meant to be a jokeasdgasdfasdg"
+    },
+    "blog3": {
+      "title": "Never been so easy to collect",
+      "content": "Indeed, Poopecoin is one of the few cryptocurrencies that has been used for this main purpose from day one. Poopie was first adsagasdfasdg"
+    }
+  },
+  "section7": {
+    "description": "ITS A beautiful When Meme token Can bring people together",
+    "join": "Join our POOPE community today.It's one of the fastest growing communities on Solana! Don't miss out POOPE, $POO."
+  },
+  "footer": {
+    "col1": "Every bathroom break becomes a bullseye moment to embrace your inner marksman. Nail that tight deadline, blast through the crypto world.",
+    "col2": {
+      "ul": "SITEMAP",
+      "li1": "What is Poopie",
+      "li2": "Buy Poopie",
+      "li3": "FAQ"
+    },
+    "col3": {
+      "ul": "FOUNDATION",
+      "blog": "Blog"
+    },
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
+  "connect_modal": {
+    "title": "Connect to your Solana Wallet"
+  },
+  "auth_modal": {
+    "login_title": "Login",
+    "register_title": "Register",
+    "verify_title": "Enter verification code",
+    "gender": "Gender",
+    "btn_login": "Login",
+    "btn_register": "Register",
+    "btn_verify": "Verify"
+  },
+  "dashboard": "Dashboard",
+  "transactions": "Transactions",
+  "market": "Market",
+  "notification": "Notification",
+  "settings": "Settings",
+  "support": "Support",
+  "logout": "Log out",
+  "manage": "Manage",
+  "home": {
+    "total": "Total Poopie Balance",
+    "price": "Price",
+    "chart": "Chart",
+    "lowerprice": "Lower Price",
+    "higherprice": "Higher Price",
+    "buypoopie": "Buy Poopie",
+    "recenttrans": "Recent Transactions",
+    "max": "Max",
+    "fee": "Transaction fee: ",
+    "viewhistory": "VIEW HISTORY"
+  },
+  "chart": {
+    "price": "Price",
+    "chart": "Chart"
+  },
+  "swap": "Swap",
+  "featuretitle": "New Features That Will Make Your Crypto Life Easier",
+  "featurecontent": "We’re finally ready to tell you everything about this new version",
+  "letsee": "LETS SEE",
+  "buylabel": "Buy",
+  "token_modal": {
+    "title": "Select a token",
+    "recent": "Recent",
+    "alltokens": "All Tokens",
+    "balance": "Balance/addresses"
+  },
+  "loading": "Loading",
+  "notfound": "GET YOUR SHIT DONE",
+  "notfound-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra integer vel quam amet eget. Massa nec nam molestie urna, iaculis sed.",
+  "today": "Today",
+  "days7": "7 Days",
+  "days30": "30 Days",
+  "buy": "Buy",
+  "withdraw": "Withdraw",
+  "convert": "Convert"
+}
