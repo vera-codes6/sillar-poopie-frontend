@@ -1,5 +1,5 @@
 import Translations from '@/components/Translations'
-import { Box, IconButton, Stack, styled, Typography } from '@mui/material'
+import { Box, CircularProgress, IconButton, Stack, styled, Typography } from '@mui/material'
 import {
   AreaPlot,
   BarPlot,
@@ -59,10 +59,12 @@ export default function DashboardChart() {
   const [period, setPeriod] = useState<string>('1d')
   const [series, setSeries] = useState<number[]>([])
   const [xAxis, setXAxis] = useState<number[]>([])
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const fetchData = useCallback(async (input: string) => {
     try {
       setPeriod(input)
+      setIsLoading(true)
       const response = await getPrices(input)
       const prices = (response as PriceResponse).data.prices
       const newSeries = [],
@@ -73,7 +75,10 @@ export default function DashboardChart() {
       }
       setSeries(newSeries)
       setXAxis(newXAxis)
-    } catch {}
+    } catch {
+    } finally {
+      setIsLoading(false)
+    }
   }, [])
 
   useEffect(() => {
@@ -139,7 +144,13 @@ export default function DashboardChart() {
           </IconButton>
         </Stack>
       </Stack>
-      <Stack width='100%' direction='row' spacing='10px' height='323px'>
+      <Stack width='100%' direction='row' spacing='10px' height='323px' position='relative'>
+        {isLoading && (
+          <CircularProgress
+            color='inherit'
+            sx={{ position: 'absolute', transform: 'translate(-50%,-50%)', left: '50%', top: '50%' }}
+          />
+        )}
         <ResponsiveChartContainer
           series={[
             {

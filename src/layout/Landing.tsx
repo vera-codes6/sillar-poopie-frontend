@@ -1,7 +1,7 @@
 import Header from './Header/LandingHeader'
 import Footer from './Footer'
 import LandingContent from '@/pages/Landing'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ConnectModal from '@/components/Modal/ConnectModal'
 import AuthModal from '@/components/Modal/AuthModal'
 import { useIsLoggedIn } from '@/hooks/useIsLoggedIn'
@@ -14,9 +14,11 @@ export default function Landing() {
   const isLoggedIn = useIsLoggedIn()
   const navigate = useNavigate()
 
-  if (isLoggedIn) {
-    navigate(ROUTES.DASHBOARD.HOME)
-  }
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate(ROUTES.DASHBOARD.HOME)
+    }
+  }, [isLoggedIn])
 
   const handleOpen = () => {
     if (isLoggedIn) dispatch(logout())

@@ -4,13 +4,12 @@ import { Badge, Box, Drawer, Stack, styled } from '@mui/material'
 import Translations from '@/components/Translations'
 import Logo from '@/components/Logo'
 import { ROUTES } from '@/constants/routes'
-import { Link } from 'react-router-dom'
-import { DASHBOARD, MARKET, NOTIFICATION, SETTINGS, TRANSACTIONS } from '@/constants/sidebar'
+import { NavLink } from 'react-router-dom'
+import { DASHBOARD, LOGOUT, MARKET, NOTIFICATION, SETTINGS, SUPPORT, TRANSACTIONS } from '@/constants/sidebar'
 import { colors } from '@/theme/themePrimitives'
 import AppIcon from '@/components/AppIcon'
-import { useSelector } from '@/store'
 
-const TabItem = styled(Link)({
+const TabItem = styled(NavLink)({
   background: 'none',
   border: 'none',
   fontFamily: 'Inter',
@@ -28,17 +27,22 @@ const TabItem = styled(Link)({
   alignItems: 'center'
 })
 
+const activeTabState = ({ isActive }: { isActive: boolean }) => {
+  return {
+    color: isActive ? colors.white : colors.black74
+  }
+}
+
 interface Props {
   mobileOpen: boolean
   handleDrawerToggle: () => void
   tab: string
   handleSetTab: (tab: string) => void
+  newsCount: number
 }
 
-export default function Sidebar({ mobileOpen, handleDrawerToggle, tab, handleSetTab }: Props) {
+export default function Sidebar({ mobileOpen, handleDrawerToggle, tab, handleSetTab, newsCount }: Props) {
   const container = window !== undefined ? () => document.body : undefined
-
-  const { newsCount } = useSelector(store => store.notification)
 
   const DrawerContent = useMemo(() => {
     return (
@@ -48,32 +52,24 @@ export default function Sidebar({ mobileOpen, handleDrawerToggle, tab, handleSet
         </Stack>
         <Stack direction='column' justifyContent='space-between' height='100%'>
           <Stack direction='column' spacing='8px'>
-            <TabItem
-              sx={{ color: tab === DASHBOARD ? colors.white : colors.black74 }}
-              onClick={() => handleSetTab(DASHBOARD)}
-              to={ROUTES.DASHBOARD.HOME}
-            >
+            <TabItem style={activeTabState} onClick={() => handleSetTab(DASHBOARD)} to={ROUTES.DASHBOARD.HOME}>
               <AppIcon name='dashboard' />
               <Translations text={DASHBOARD} />
             </TabItem>
             <TabItem
-              sx={{ color: tab === TRANSACTIONS ? colors.white : colors.black74 }}
+              style={activeTabState}
               onClick={() => handleSetTab(TRANSACTIONS)}
               to={ROUTES.DASHBOARD.TRANSACTION}
             >
               <AppIcon name='transactions' />
               <Translations text={TRANSACTIONS} />
             </TabItem>
-            <TabItem
-              sx={{ color: tab === MARKET ? colors.white : colors.black74 }}
-              onClick={() => handleSetTab(MARKET)}
-              to={ROUTES.DASHBOARD.MARKET}
-            >
+            <TabItem style={activeTabState} onClick={() => handleSetTab(MARKET)} to={ROUTES.DASHBOARD.MARKET}>
               <AppIcon name='market' />
               <Translations text={MARKET} />
             </TabItem>
             <TabItem
-              sx={{ color: tab === NOTIFICATION ? colors.white : colors.black74 }}
+              style={activeTabState}
               onClick={() => handleSetTab(NOTIFICATION)}
               to={ROUTES.DASHBOARD.NOTIFICATION}
             >
@@ -82,25 +78,17 @@ export default function Sidebar({ mobileOpen, handleDrawerToggle, tab, handleSet
               </Badge>
               <Translations text={NOTIFICATION} />
             </TabItem>
-            <TabItem
-              sx={{ color: tab === SETTINGS ? colors.white : colors.black74 }}
-              onClick={() => handleSetTab(SETTINGS)}
-              to={ROUTES.DASHBOARD.SETTING}
-            >
+            <TabItem style={activeTabState} onClick={() => handleSetTab(SETTINGS)} to={ROUTES.DASHBOARD.SETTING}>
               <AppIcon name='settings' />
               <Translations text={SETTINGS} />
             </TabItem>
           </Stack>
           <Stack direction='column' spacing='8px'>
-            <TabItem
-              sx={{ color: tab === 'support' ? colors.white : colors.black74 }}
-              onClick={() => handleSetTab('support')}
-              to={ROUTES.DASHBOARD.SUPPORT}
-            >
+            <TabItem style={activeTabState} onClick={() => handleSetTab(SUPPORT)} to={ROUTES.DASHBOARD.SUPPORT}>
               <AppIcon name='support' />
               <Translations text='support' />
             </TabItem>
-            <TabItem to='#'>
+            <TabItem to='#' onClick={() => handleSetTab(LOGOUT)}>
               <AppIcon name='logout' />
               <Translations text='logout' />
             </TabItem>

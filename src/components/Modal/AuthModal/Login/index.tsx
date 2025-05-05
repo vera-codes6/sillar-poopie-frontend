@@ -46,8 +46,6 @@ export default function Login({ setStep }: AuthComponentProps) {
       const response = await loginUser(formData)
       dispatch(login({ user: response.data.user, accessToken: response.data.jwt }))
 
-      await connectSocket()
-
       navigate(ROUTES.DASHBOARD.HOME)
     } catch (error) {
       handleError(error)

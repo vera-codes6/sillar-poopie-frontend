@@ -4,6 +4,7 @@ import { SOCKET_SERVER_URL } from '@/configs'
 import { dispatch, pushNotification } from '@/store'
 import { toast } from 'react-toastify'
 import { handleError } from '@/utils'
+import { useIsLoggedIn } from '@/hooks/useIsLoggedIn'
 
 export const connectSocket = async () => {
   try {
