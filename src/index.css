@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+/* @import 'tailwindcss'; */
 
 .phase-title {
   color: var(--Black, #141414);
@@ -32,4 +32,13 @@ body {
 
 body::-webkit-scrollbar {
   width: 1px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+input {
+  border: none;
+  background-color: none;
 }
