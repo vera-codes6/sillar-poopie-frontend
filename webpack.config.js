@@ -23,22 +23,22 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/
       },
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [autoprefixer]
-              }
-            }
-          },
-          'sass-loader'
-        ]
-      },
+      // {
+      //   test: /\.scss$/,
+      //   use: [
+      //     'style-loader',
+      //     'css-loader',
+      //     {
+      //       loader: 'postcss-loader',
+      //       options: {
+      //         postcssOptions: {
+      //           plugins: [autoprefixer]
+      //         }
+      //       }
+      //     },
+      //     'sass-loader'
+      //   ]
+      // },
       {
         test: /\.svg$/,
         issuer: /\.[jt]sx?$/,
@@ -46,7 +46,8 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader']
+        // use: ['style-loader', 'css-loader', 'postcss-loader']
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(png|jpg|jpeg|gif|webp)$/i,

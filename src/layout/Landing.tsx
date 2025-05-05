@@ -6,10 +6,17 @@ import ConnectModal from '@/components/Modal/ConnectModal'
 import AuthModal from '@/components/Modal/AuthModal'
 import { useIsLoggedIn } from '@/hooks/useIsLoggedIn'
 import { dispatch, logout } from '@/store'
+import { useNavigate } from 'react-router-dom'
+import { ROUTES } from '@/constants/routes'
 
 export default function Landing() {
   const [open, setOpen] = useState(false)
   const isLoggedIn = useIsLoggedIn()
+  const navigate = useNavigate()
+
+  if (isLoggedIn) {
+    navigate(ROUTES.DASHBOARD.HOME)
+  }
 
   const handleOpen = () => {
     if (isLoggedIn) dispatch(logout())
