@@ -1,4 +1,4 @@
-import { Badge, Box, Button, IconButton, Stack, Theme, Typography } from '@mui/material'
+import { Badge, Box, Button, IconButton, Stack, styled, Theme, Typography } from '@mui/material'
 import Popover from '@mui/material/Popover'
 
 import LanguagePicker from '@/components/SelectLanguage'
@@ -9,10 +9,8 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import AppIcon from '@/components/AppIcon'
 import { colors } from '@/theme/themePrimitives'
-import Notification from '@/pages/Dashboard/Notification'
 import NotificationBox from '@/pages/Dashboard/Notification/NotificationBox'
-import { styled } from '@mui/system'
-import { useSelector } from '@/store'
+import { dispatch, logout, useSelector } from '@/store'
 
 const btnStyle = (theme: Theme) => ({
   color: theme.palette.text.primary,
@@ -40,6 +38,12 @@ const btnTextStyle = (theme: Theme) => ({
   fontWeight: 500
 })
 
+const NotificationContainer = styled(Stack)(({ theme }) => ({
+  padding: '20px',
+  width: '500px',
+  height: '300px'
+}))
+
 interface Props {
   title: string
   handleDrawerToggle: () => void
@@ -63,6 +67,10 @@ export default function DashHeader({ title, handleDrawerToggle }: Props) {
 
   const handleClose = () => {
     setAnchorEl(null)
+  }
+
+  const handleProfile = () => {
+    dispatch(logout())
   }
 
   const open = Boolean(anchorEl)
@@ -147,14 +155,16 @@ export default function DashHeader({ title, handleDrawerToggle }: Props) {
               horizontal: 'right'
             }}
           >
-            <Stack padding={3} width='500px' height='300px'>
+            <NotificationContainer>
               <Typography component='h5' variant='h5' mb={2}>
                 Notification
               </Typography>
               <NotificationBox />
-            </Stack>
+            </NotificationContainer>
           </Popover>
-          <Box component='img' alt='avatar' src='./assets/img/user.webp' width='40px' height='40px' />
+          <IconButton onClick={handleProfile}>
+            <Box component='img' alt='avatar' src='./assets/img/user.webp' width='40px' height='40px' />
+          </IconButton>
         </Box>
       </Stack>
     </Box>

@@ -5,9 +5,7 @@ import NotificationItem from './NotificationItem'
 import { NotificationType } from '@/types/notification'
 import { markNotificationById } from '@/services/notificationServices'
 import { handleError } from '@/utils'
-import { dispatch, markNotificationAsRead, pushNotifications, useSelector } from '@/store'
-import { NotificationResponse } from '@/types/notification'
-import { fetchNotifications } from '@/services/notificationServices'
+import { dispatch, markNotificationAsRead, useSelector } from '@/store'
 
 export default function NotificationBox() {
   const { notifications } = useSelector(store => store.notification)
@@ -20,19 +18,6 @@ export default function NotificationBox() {
       handleError(e)
     }
   }
-
-  const init = async () => {
-    try {
-      var response = await fetchNotifications()
-      dispatch(pushNotifications((response as NotificationResponse).data))
-    } catch (error) {
-      handleError(error)
-    }
-  }
-
-  useEffect(() => {
-    init()
-  }, [])
 
   return (
     <Stack gap={2} width='100%'>

@@ -5,17 +5,10 @@ import router from './routes'
 import { ToastContainer } from 'react-toastify'
 import { useEffect } from 'react'
 import { connectSocket } from './lib/socket'
-import { useIsLoggedIn } from './hooks/useIsLoggedIn'
 
 export default function App() {
-  const isLoggedIn = useIsLoggedIn()
-
-  const init = async () => {
-    if (isLoggedIn) await connectSocket()
-  }
-
   useEffect(() => {
-    init()
+    connectSocket()
   }, [])
 
   return (

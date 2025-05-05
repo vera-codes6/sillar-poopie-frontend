@@ -1,8 +1,6 @@
-import AppIcon from '@/components/AppIcon'
-import { fetchTransactions } from '@/services/transServices'
-import { TransactionResponse, TransactionType } from '@/types/transaction'
 import {
   Box,
+  CircularProgress,
   IconButton,
   Paper,
   Stack,
@@ -15,24 +13,39 @@ import {
 } from '@mui/material'
 import TableCell, { tableCellClasses } from '@mui/material/TableCell'
 import { useEffect, useState } from 'react'
+
 import { StatusLabel } from './StatusLabel'
 import BuyPoopie from '../Home/BuyPoopie'
 import { colors } from '@/theme/themePrimitives'
+import AppIcon from '@/components/AppIcon'
+import { fetchTransactions } from '@/services/transServices'
+import { TransactionResponse, TransactionType } from '@/types/transaction'
+import { handleError } from '@/utils'
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {},
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14
   },
-  border: 'none'
+  border: 'none',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis'
 }))
 
 export default function Transaction() {
   const [transList, setTransList] = useState<TransactionType[]>([])
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const fetchList = async (pageNumber: number, pageSize: number) => {
-    var response = await fetchTransactions(pageNumber, pageSize)
-    setTransList((response as TransactionResponse).data)
+    try {
+      setIsLoading(true)
+      var response = await fetchTransactions(pageNumber, pageSize)
+      setTransList((response as TransactionResponse).data)
+    } catch (error) {
+      handleError(error)
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   useEffect(() => {
@@ -108,6 +121,7 @@ export default function Transaction() {
             </TableBody>
           </Table>
         </TableContainer>
+        {isLoading && <CircularProgress color='inherit' sx={{ m: 'auto' }} />}
       </Stack>
       <Stack direction='column' spacing='24px' sx={{ width: { xs: '100%', lg: '30%' } }}>
         <BuyPoopie />
