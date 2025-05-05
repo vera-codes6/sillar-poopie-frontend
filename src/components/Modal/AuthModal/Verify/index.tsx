@@ -14,6 +14,7 @@ import { verifyEmail } from '@/services/userServices'
 import { handleError } from '@/utils'
 import { AUTH_STEP } from '@/constants/authModal'
 import { useCallback, useEffect, useState } from 'react'
+import { ROUTES } from '@/constants/routes'
 
 const schema = yup.object().shape({
   email: yup.string().required(''),
@@ -30,7 +31,11 @@ const Verify = ({ email, setStep }: VerifyProps) => {
   const decreaseTime = () => {
     console.log(time)
     if (time <= 0) setStep(AUTH_STEP.REGISTER)
-    else setTime(prev => prev - 1)
+    else
+      setTime(prev => {
+        if (prev < 1) setStep(AUTH_STEP.REGISTER)
+        return prev - 1
+      })
   }
 
   useEffect(() => {
